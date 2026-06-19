@@ -990,3 +990,221 @@
 
 
 
+
+//find nth even febonacii number
+// //Method 1 - but sare test case pass nh honge -144
+// function fibo(n)
+// {
+//     return fibonacci (n)
+// }
+// console.log(fibo(12))
+
+
+
+// function fibonacci (n)
+// {
+//     if(n==1||n==2)
+//     {
+//         return 1
+//     }
+//     return fibonacci(n-1) + fibonacci(n-2) 
+// }
+
+
+
+
+
+
+// //Method 2
+// function fib (n)
+// {
+//     function helper(n)
+//     {
+//         if(n==1||n==2)
+//         {
+//             return 1
+//         }
+//         let val = helper(n-1) + helper(n-2)
+//         return val
+//     }
+//     return fib(n*3)
+// }
+// console.log(fib(12))
+
+
+// //method 3 - ans galat ara h yeh code se -14930352
+// function fibo(n)
+// {
+//     let ans = fibonacci(n*3)
+//     return (ans%1000000007)
+// }
+// console.log(fibo(12))
+
+
+
+// function fibonacci (n)
+// {
+//     let map = new Map()
+//     if(map.has(n))
+//     {
+//         return map.get(n)
+//     }
+
+//     if(n==1||n==2)
+//     {
+//         return 1
+//     }
+    
+//     let val =fibonacci(n-1) + fibonacci(n-2) 
+//     map.set(n,val)
+//     return val
+
+    
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// print all subsequnce of a array
+// function subsequnceArr(arr, index, ans)
+// {
+//     if(index == arr.length)
+//     {
+//         console.log(ans)
+//         return
+//     }
+//     ans.push(arr[index])
+//     subsequnceArr(arr, index + 1, ans )
+//     ans.pop()
+//     subsequnceArr(arr, index + 1, ans )
+// }
+// subsequnceArr([1, 2, 3, 4], 0, [])
+
+
+
+
+
+
+
+
+//print all subsequnce of a string -tc = 2 ki power n
+// function subsequnceStr(str, i , ans)
+// {
+//     if(i==str.length)
+//     {
+//         console.log(ans)
+//         return
+//     }
+
+//     subsequnceStr(str, i+1, ans+str[i])
+//     subsequnceStr(str,i+1, ans)
+// }
+// subsequnceStr("soms", 0, "")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//keypad combination - letter combination of a key pad phone
+// tv 
+// tw
+// tx
+// uv
+// uw
+// ux
+// let arr = [".;" , "abc" , "def" , "ghi", "jkl" , "mno","pqrs" ,"tu", "vwx","yz"]
+// function solve(n, idx, ans) // n is no we are treating it like str
+// {
+//     if(idx == n.length)
+//     {
+//         console.log(ans)
+//         return
+//     }
+
+//     let currstr = arr[n[idx]]
+//     for(let item of currstr)
+//     {
+//         ans+= item
+//         solve(n, idx+1, ans)
+//         ans = ans.slice(0, ans.length-1)
+//     }
+// }
+// solve("78", 0, "")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//longest common substring - BABC is the longest substring
+// let str1= "ABABC"
+// let str2 = "BABCA"
+
+// let map = new Map()
+// for(let i = 0; i<str1.length; i++)
+// {
+//     let temp = ""
+//     for(let j = i; j<str1.length; j++)
+//     {
+//         temp+=str1[j]
+//         // console.log(temp)
+//         let arr = map.get(j-i+1)
+//         map.set(j-i+1 , arr? [...arr, temp] : [temp])
+
+//     }
+// }
+
+// let ans = ""
+// for(let i = 0; i<str2.length; i++)
+// {
+//     let temp = ""
+//     for(let j = i; j<str2.length; j++)
+//     {
+//         temp+=str2[j]
+//         // console.log(temp)
+//         let arr = map.get(j-i+1)
+//         //console.log(arr, temp)
+//         // map.set(j-i+1 , arr? [...arr, temp] : [temp])
+
+//         if(arr.includes(temp) && temp.length > ans.length)
+//         {
+//             ans = temp
+//         }
+
+//     }
+// }
+
+// console.log(ans)

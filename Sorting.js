@@ -146,56 +146,156 @@
 
 ///++++++++++++++++++++++ Merge Sort ++++++++++++++++++++++++++++++++++++++
 // recursion use hota h 
-let a1 = [1, 7, 37, 46, 56]
-let a2 = [3, 5, 4, 10, 100, 101, 102]
+// let a1 = [1, 7, 37, 46, 56]
+// let a2 = [3, 5, 4, 10, 100, 101, 102]
 
 
-function merge(a1, a2, )
-{
-    let ans = []
-    let j = 0
-    let i = 0
+// function merge(a1, a2, )
+// {
+//     let ans = []
+//     let j = 0
+//     let i = 0
 
-    while(i<a1.length || j<a2.length)
-    {
-        if(a1[i] <=a2[j])
-        {
-        ans.push(a1[i])
-        i++
-        }
-        else{
-            if(a2[j])
-            {
-                ans.push(a2[j])
-                j++
-            }
-            else
-            {
-                ans.push(a1[i])
-                i++
-            }
-        }
-    }
+//     while(i<a1.length || j<a2.length)
+//     {
+//         if(a1[i] <=a2[j])
+//         {
+//         ans.push(a1[i])
+//         i++
+//         }
+//         else{
+//             if(a2[j])
+//             {
+//                 ans.push(a2[j])
+//                 j++
+//             }
+//             else
+//             {
+//                 ans.push(a1[i])
+//                 i++
+//             }
+//         }
+//     }
 
-    return ans
-}
-console.log(merge(a1, a2))
+//     return ans
+// }
+// console.log(merge(a1, a2))
 
 
 
 //merge k liye jo code likha the vo niche merege sort me use hoga hum merege sort se bas 2 array nikal k de rahe h merge ko
 
-let arr = [99, 4, 7, 77, 80, 1]
-function Mergesort(arr)
-{
-    if(arr.length == 1||arr.length==0)
-    {
-        return arr
-    }
-    let mid = Math.floor(arr.length/2)
+// let arr = [99, 4, 7, 77, 80, 1]
+// function Mergesort(arr)
+// {
+//     if(arr.length == 1||arr.length==0)
+//     {
+//         return arr
+//     }
+//     let mid = Math.floor(arr.length/2)
 
-    let left =Mergesort(arr.slice(0, mid))
-    let right = Mergesort(arr.slice(mid))
-    return merge(left , right)
-}
-console.log(Mergesort(arr))
+//     let left =Mergesort(arr.slice(0, mid))
+//     let right = Mergesort(arr.slice(mid))
+//     return merge(left , right)
+// }
+// console.log(Mergesort(arr))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//+++++++++++++++++++++++++++ Quick sort ++++++++++++++++++++++++++++++++++++++++
+//Method 1
+// let arr = [10, 20, 1, 3, 99, -1]
+// function quicksort(arr)
+// {
+//     if(arr.length == 0 || arr.length == 1)
+//     {
+//         return arr
+//     }
+//     let pivot = arr[arr.length-1]
+//     let left = []
+//     let right = []
+
+//     for(let i = 0; i<arr.length -1;i++ )
+//     {
+//         if(arr[i] <= pivot)
+//         {
+//             left.push(arr[i])
+//         }
+//         else{
+//             right.push(arr[i])
+//         }
+//     }
+//     let sortedleft = quicksort(left)
+//     let sortedright = quicksort(right)
+
+//     return [...sortedleft ,pivot , ...sortedright]
+// }
+// console.log(quicksort(arr))
+
+
+
+
+
+// //Method2
+// let arr = [10, 20, 1, 3, 99, -1]
+// function quicksort(arr)
+// {
+//     if(arr.length == 0 || arr.length == 1)
+//     {
+//         return arr
+//     }
+//     let pivotindx = Math.floor(Math.random() * arr.length) 
+//     let pivot  = arr[pivotindx]
+//     let left = []
+//     let right = []
+
+//     for(let i = 0; i<arr.length;i++ )
+//     {
+//         if(i==pivotindx) continue
+//         if(arr[i] <= pivot)
+//         {
+//             left.push(arr[i])
+//         }
+//         else{
+//             right.push(arr[i])
+//         }
+//     }
+//     let sortedleft = quicksort(left)
+//     let sortedright = quicksort(right)
+
+//     return [...sortedleft ,pivot , ...sortedright]
+// }
+// console.log(quicksort(arr))

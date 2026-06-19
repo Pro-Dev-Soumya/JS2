@@ -142,3 +142,40 @@
 // }
 
 // console.log(ans)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// find which elemenets of both array is making target =9 . output = 1, 8, 5, 4, 4, 5 else print -1
+// let arr1 = [1, 2, 4, 5, 7]
+// let arr2 = [5, 6, 3, 4, 8]
+// // 1+8 = 9 //5+4 = 9// 4+5 =9 //
+// function target(arr1, arr2, target)
+// {
+//     let set = new Set(arr2)
+//     // console.log(set)
+//     let ans =""
+//     for(let item of arr1)
+//     {
+//         if(set.has(target - item))
+//         {
+//             ans+= item + " , " + (target-item) + " ,"
+//         }
+//     }
+
+//     return ans.length > 0? ans : -1
+// }
+// console.log(target(arr1, arr2, 9))
