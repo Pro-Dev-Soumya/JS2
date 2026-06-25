@@ -88,3 +88,97 @@
 // }
 
 // console.log(ans)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//longest common substring - BABC is the longest substring
+// let str1= "ABABC"
+// let str2 = "BABCA"
+
+// let map = new Map()
+// for(let i = 0; i<str1.length; i++)
+// {
+//     let temp = ""
+//     for(let j = i; j<str1.length; j++)
+//     {
+//         temp+=str1[j]
+//         // console.log(temp)
+//         let arr = map.get(j-i+1)
+//         map.set(j-i+1 , arr? [...arr, temp] : [temp])
+
+//     }
+// }
+
+// let ans = ""
+// for(let i = 0; i<str2.length; i++)
+// {
+//     let temp = ""
+//     for(let j = i; j<str2.length; j++)
+//     {
+//         temp+=str2[j]
+//         // console.log(temp)
+//         let arr = map.get(j-i+1)
+//         //console.log(arr, temp)
+//         // map.set(j-i+1 , arr? [...arr, temp] : [temp])
+
+//         if(arr.includes(temp) && temp.length > ans.length)
+//         {
+//             ans = temp
+//         }
+
+//     }
+// }
+
+// console.log(ans)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let str1= "ABABC"
+// let str2 = "BABCA"
+
+// let longest =""
+// for(let i = 0; i<str1.length; i++)
+// {
+//     let res =""
+//     for(let j = i;  j<str1.length; j++)
+//     {
+//     res += str1[j]
+//     // console.log(res)
+
+//     if(str2.includes(res))
+//         if(longest.length<res.length)
+//         {
+//             longest=res
+//         }
+//     }
+// }
+// console.log(longest || "no comon substring")
